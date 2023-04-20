@@ -1,0 +1,161 @@
+﻿using GestãoDeProjeto.Models;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace GestãoDeProjeto.Controllers
+{
+    public class UsuarioController : Controller
+    {
+
+        private static IList<Usuario> usuarios =
+            new List<Usuario>()
+            {
+                new Usuario()
+                {
+                    id = 1,
+                    nome = "Fulano Beltrano",
+                    dataNasc = "12/12/2000",
+                    endereco ="rua 1 lot500 nº21",
+                    email="email@email.com",
+                    cargo="gerente",
+                },
+                new Usuario()
+                {
+                    id = 2,
+                    nome = "Cicrano Jose",
+                    dataNasc = "12/12/1995",
+                    endereco ="rua 3 lot520 nº22",
+                    email="email2@email.com",
+                    cargo="assistente",
+                },
+                new Usuario()
+                {
+                    id = 3,
+                    nome = "Jumarque Filino",
+                    dataNasc = "01/02/1998",
+                    endereco ="rua Lagarto nº 56",
+                    email="emaillegal@email.com",
+                    cargo="Desenvolvedor",
+                },
+                new Usuario()
+                {
+                    id = 4,
+                    nome = "Juberto Berto",
+                    dataNasc = "21/02/2003",
+                    endereco ="rua Siqueira nº11",
+                    email="emailgenerico@email.com",
+                    cargo="Assistente de Negocios",
+                },
+                new Usuario()
+                {
+                    id = 5,
+                    nome = "Phoenix Baker",
+                    dataNasc = "22/05/1989",
+                    endereco ="rua Viseira  nº22",
+                    email="phoenix@email.com",
+                    cargo="Produtor",
+                },
+                new Usuario()
+                {
+                    id = 6,
+                    nome = "Lana Steiner",
+                    dataNasc = "26/08/1999",
+                    endereco ="rua Cimero nº2112",
+                    email="lanast@email.com",
+                    cargo="UX Designer",
+                },
+                new Usuario()
+                {
+                    id = 7,
+                    nome = "Candice Wu",
+                    dataNasc = "11/12/2002",
+                    endereco ="rua Jupte nº2231",
+                    email="candicewu@email.com",
+                    cargo="UX Copywriter",
+                },
+                new Usuario()
+                {
+                    id = 8,
+                    nome = "Orlando Diggs",
+                    dataNasc = "21/06/1989",
+                    endereco ="rua Palmeira nº500",
+                    email="orlando@email.com",
+                    cargo="Product Designer",
+                },
+            };
+        // GET: UsuarioController
+        public ActionResult Index()
+        {
+            return View(usuarios);
+        }
+
+        // GET: UsuarioController/Details/5
+        public ActionResult Details(int id)
+        {
+            return View();
+        }
+
+        // GET: UsuarioController/Create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        // POST: UsuarioController/Create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create(Usuario user)
+        {
+
+                usuarios.Add(user);
+                user.id =
+                usuarios.Select(i=> i.id).Max() + 1;
+                return RedirectToAction("Index");
+
+        }
+
+        // GET: UsuarioController/Edit/5
+        public ActionResult Edit(int id)
+        {
+            return View();
+        }
+
+        // POST: UsuarioController/Edit/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, IFormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: UsuarioController/Delete/5
+        public ActionResult Delete(int id)
+        {
+            return View();
+        }
+
+        // POST: UsuarioController/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id, IFormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                return View();
+            }
+        }
+    }
+}
