@@ -1,12 +1,11 @@
 ﻿@model GestãoDeProjeto.Models.Usuario
 
 @{
-    ViewData["Title"] = "Delete";
+    ViewData["Title"] = "Details";
 }
 
-<h1>Delete</h1>
+<h1>Detalhes</h1>
 
-<h3>Deseja Excluir ?</h3>
 <div>
     <h4>Usuario</h4>
     <hr />
@@ -42,10 +41,8 @@
             @Html.DisplayFor(model => model.cargo)
         </dd>
     </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="id" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.id">Editar</a> |
+    <a asp-action="Index">Back to List</a>
 </div>

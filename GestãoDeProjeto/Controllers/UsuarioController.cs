@@ -94,7 +94,7 @@ namespace GestãoDeProjeto.Controllers
         // GET: UsuarioController/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            return View(usuarios.Where(i => i.id == id).First());
         }
 
         // GET: UsuarioController/Create
@@ -119,43 +119,33 @@ namespace GestãoDeProjeto.Controllers
         // GET: UsuarioController/Edit/5
         public ActionResult Edit(int id)
         {
-            return View();
+            return View(usuarios.Where(i=> i.id == id).First());
         }
 
         // POST: UsuarioController/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, IFormCollection collection)
+        public ActionResult Edit(Usuario user)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            usuarios.Remove(usuarios.Where(i => i.id == user.id).First());
+            usuarios.Add(user);
+            return RedirectToAction("Index");
+
         }
 
         // GET: UsuarioController/Delete/5
         public ActionResult Delete(int id)
         {
-            return View();
+            return View(usuarios.Where(i => i.id == id).First());
         }
 
         // POST: UsuarioController/Delete/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Delete(int id, IFormCollection collection)
+        public ActionResult Delete(int id, Usuario user)
         {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
+            usuarios.Remove(usuarios.Where(i => i.id == user.id).First());
+            return RedirectToAction("Index");
         }
     }
 }

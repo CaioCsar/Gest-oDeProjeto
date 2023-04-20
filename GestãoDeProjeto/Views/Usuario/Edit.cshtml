@@ -1,16 +1,16 @@
 ﻿@model GestãoDeProjeto.Models.Usuario
 
 @{
-    ViewData["Title"] = "EditarUsuario";
+    ViewData["Title"] = "Editar";
 }
 
-<h1>EditarUsuario</h1>
+<h1>Editar Usuario</h1>
 
 <h4>Usuario</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="EditarUsuario">
+        <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="nome" class="control-label"></label>
