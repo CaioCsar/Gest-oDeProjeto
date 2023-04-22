@@ -96,15 +96,18 @@ table  th, td{
     margin-bottom:100px !important;
 }
 
+/*borda tabela*/
 .table {
     border: 1px solid gray;
     border-spacing: 2px;
 }
 
+/*cor do status*/
 .statusUser{
     color: lawngreen;
 }
 
+/*bolinha verde do active*/
 .circulo{
     width: 5px;
     height: 5px;
@@ -112,16 +115,38 @@ table  th, td{
     border-radius: 50%;
 }
 
+/*botoes da tabela*/
+.botoesTabela {
+    height:20px !important;
+}
+
+.botoesTabela:hover{
+    height:22px !important;
+}
+
 /*TELA INICIAL HOME*/
 
-.inicialScreen{
-    text-shadow: 1px 0.5px blue;
+.inicialScreen {
+    text-shadow: 1px 0.5px white;
     background-image: url(../img/HOMEPAGE.jpg);
-    background-repeat:no-repeat;
-    background-size:cover;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Bruno Ace SC', cursive !important;
 }
 
 body {
     background: rgb(199,199,204);
     background: linear-gradient(0deg, rgba(199,199,204,1) 25%, rgba(111,111,111,1) 77%);
+}
+
+/*TELA DE EDITAR*/
+
+.inputIMG {
+    height:100px !important; 
+    margin:auto; 
+    cursor:pointer;
+}
+
+.inputIMG:hover{
+    height:120px !important;
 }

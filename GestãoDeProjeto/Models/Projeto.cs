@@ -29,7 +29,7 @@ namespace GestãoDeProjeto.Models
 
         [Column("PROJESTIMATIVA")]
         [Display(Name = "Estimativa em meses")]
-        [StringLength(100)]
+        [StringLength(2)]
         public string estimativaEmMeses { get; set; }
 
         [Display(Name ="CASA")]
@@ -41,10 +41,12 @@ namespace GestãoDeProjeto.Models
         public string valorProj { get; set; }
 
         [Column("PROJSDATAAPROV")]
+        [StringLength(4)]
         [Display(Name = "Ano de Aprovação")]
         public string anoDeAprovacao { get; set; }
 
         [Column("PROJNUMERO")]
+        [StringLength(4)]
         [Display(Name = "Número do Projeto")]
         public string numeroDoProj { get; set; }
 
