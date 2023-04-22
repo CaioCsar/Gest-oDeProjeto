@@ -83,3 +83,27 @@ body {
     font-weight: bold;
     margin-left: 15px;
 }
+
+/*  TABELA*/
+table  th, td{
+    text-align: center !important;
+    vertical-align:middle !important;
+    min-width: fit-content !important;
+    padding-bottom:5px !important;
+}
+
+.table {
+    border: 1px solid gray;
+    border-spacing: 2px;
+}
+
+.statusUser{
+    color: lawngreen;
+}
+
+.circulo{
+    width: 5px;
+    height: 5px;
+    background-color:lawngreen;
+    border-radius: 50%;
+}

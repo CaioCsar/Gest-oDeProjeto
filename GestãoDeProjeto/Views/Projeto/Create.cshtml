@@ -4,68 +4,146 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Cadastro de Projeto</h1>
+<p>Cadastre um novo Projeto</p>
 
-<h4>Projeto</h4>
+
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<h6 class="text-center">Informações</h6>
+<hr style="margin-bottom:30px" />
+
+   
+<form asp-action="Create">
+
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row g-3">
+        <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="nome" class="control-label"></label>
                 <input asp-for="nome" class="form-control" />
                 <span asp-validation-for="nome" class="text-danger"></span>
             </div>
+        </div>
+        <div class="col-md-2">
             <div class="form-group">
                 <label asp-for="dataInicio" class="control-label"></label>
                 <input asp-for="dataInicio" class="form-control" />
                 <span asp-validation-for="dataInicio" class="text-danger"></span>
             </div>
+        </div>
+        <div class="col-md-2">
             <div class="form-group">
                 <label asp-for="dataFim" class="control-label"></label>
                 <input asp-for="dataFim" class="form-control" />
                 <span asp-validation-for="dataFim" class="text-danger"></span>
             </div>
+        </div>
+
+        <div class="col-md-2">
             <div class="form-group">
                 <label asp-for="estimativaEmMeses" class="control-label"></label>
                 <input asp-for="estimativaEmMeses" class="form-control" />
                 <span asp-validation-for="estimativaEmMeses" class="text-danger"></span>
             </div>
+        </div>
+
+        <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="local" class="control-label"></label>
                 <input asp-for="local" class="form-control" />
                 <span asp-validation-for="local" class="text-danger"></span>
             </div>
+        </div>
+        <div class="col-md-6">
             <div class="form-group">
                 <label asp-for="valorProj" class="control-label"></label>
                 <input asp-for="valorProj" class="form-control" />
                 <span asp-validation-for="valorProj" class="text-danger"></span>
             </div>
+        </div>
+    </div>
+
+
+
+    <hr />
+    <h6 class="text-center" style="margin-bottom:30px">Apresentação do Projeto</h6>
+
+    <div class="row g-3">
+        <div class="col-md-3">
             <div class="form-group">
                 <label asp-for="anoDeAprovacao" class="control-label"></label>
                 <input asp-for="anoDeAprovacao" class="form-control" />
                 <span asp-validation-for="anoDeAprovacao" class="text-danger"></span>
             </div>
+        </div>
+        
+        <div class="col-md-3">
             <div class="form-group">
                 <label asp-for="numeroDoProj" class="control-label"></label>
                 <input asp-for="numeroDoProj" class="form-control" />
                 <span asp-validation-for="numeroDoProj" class="text-danger"></span>
             </div>
+            </div>
+        <div class="col-md-3">
             <div class="form-group">
                 <label asp-for="status" class="control-label"></label>
                 <input asp-for="status" class="form-control" />
                 <span asp-validation-for="status" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+        </div>
+        </div>
 
+
+
+
+        <hr />
+        <h6 class="text-center" style="margin-bottom:30px">Anexos</h6>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div>
+                    <p>Projeto Assinado em PDF</p>
+                    <div class="input-group mb-3">
+                        <input type="file" class="form-control" id="inputGroupFile02">
+                        <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                    </div>
+                </div>
+                <div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>Plantas - PDF</p>
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="inputGroupFile02">
+                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>Demonstrativo de Orçamento</p>
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="inputGroupFile02">
+                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <p>Outros Anexos</p>
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="inputGroupFile02">
+                    <label class="input-group-text" for="inputGroupFile02">Upload</label>
+                </div>
+            </div>
+            
+
+
+            <div class="form-group">
+                <input type="submit" value="Cadastrar Novo" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-primary">Voltar</a>
+            </div>
+
+        </div>
+</form>
 <div>
-    <a asp-action="Index">Back to List</a>
+
 </div>
 
 @section Scripts {

@@ -14,6 +14,10 @@ namespace GestãoDeProjeto.Models
        [Display(Name = "Nome")]
         public string nome { get; set; }
 
+        [Column("USERSTATUS")]
+        [Display(Name = "Status")]
+        public string status{ get; set; }
+
         [Required]
         [Key]
         [Column("USERID")]

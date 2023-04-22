@@ -16,6 +16,7 @@ namespace GestãoDeProjeto.Controllers
                 {
                     id = 1,
                     nome = "Fulano Beltrano",
+                    status = "Ativo",
                     dataNasc = "12/12/2000",
                     endereco ="Rua 1 lot500 nº21",
                     email="email@email.com",
@@ -25,6 +26,7 @@ namespace GestãoDeProjeto.Controllers
                 {
                     id = 2,
                     nome = "Cicrano Jose",
+                    status = "Ativo",
                     dataNasc = "12/12/1995",
                     endereco ="Rua 3 lot520 nº22",
                     email="email2@email.com",
@@ -34,6 +36,7 @@ namespace GestãoDeProjeto.Controllers
                 {
                     id = 3,
                     nome = "Jumarque Filino",
+                    status = "Ativo",
                     dataNasc = "01/02/1998",
                     endereco ="Rua Lagarto nº 56",
                     email="emaillegal@email.com",
@@ -43,6 +46,7 @@ namespace GestãoDeProjeto.Controllers
                 {
                     id = 4,
                     nome = "Juberto Berto",
+                    status = "Ativo",
                     dataNasc = "21/02/2003",
                     endereco ="Rua Siqueira nº11",
                     email="emailgenerico@email.com",
@@ -52,6 +56,7 @@ namespace GestãoDeProjeto.Controllers
                 {
                     id = 5,
                     nome = "Phoenix Baker",
+                    status = "Ativo",
                     dataNasc = "22/05/1989",
                     endereco ="Rua Viseira  nº22",
                     email="phoenix@email.com",
@@ -61,6 +66,7 @@ namespace GestãoDeProjeto.Controllers
                 {
                     id = 6,
                     nome = "Lana Steiner",
+                    status = "Ativo",
                     dataNasc = "26/08/1999",
                     endereco ="Rua Cimero nº2112",
                     email="lanast@email.com",
@@ -70,6 +76,7 @@ namespace GestãoDeProjeto.Controllers
                 {
                     id = 7,
                     nome = "Candice Wu",
+                    status = "Ativo",
                     dataNasc = "11/12/2002",
                     endereco ="Rua Jupte nº2231",
                     email="candicewu@email.com",
@@ -79,6 +86,7 @@ namespace GestãoDeProjeto.Controllers
                 {
                     id = 8,
                     nome = "Orlando Diggs",
+                    status = "Ativo",
                     dataNasc = "21/06/1989",
                     endereco ="Rua Palmeira nº500",
                     email="orlando@email.com",
