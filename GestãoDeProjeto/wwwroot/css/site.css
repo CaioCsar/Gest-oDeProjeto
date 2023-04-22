@@ -92,6 +92,10 @@ table  th, td{
     padding-bottom:5px !important;
 }
 
+.descTitulo{
+    margin-bottom:100px !important;
+}
+
 .table {
     border: 1px solid gray;
     border-spacing: 2px;
@@ -106,4 +110,18 @@ table  th, td{
     height: 5px;
     background-color:lawngreen;
     border-radius: 50%;
+}
+
+/*TELA INICIAL HOME*/
+
+.inicialScreen{
+    text-shadow: 1px 0.5px blue;
+    background-image: url(../img/HOMEPAGE.jpg);
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+
+body {
+    background: rgb(199,199,204);
+    background: linear-gradient(0deg, rgba(199,199,204,1) 25%, rgba(111,111,111,1) 77%);
 }
